@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-5 ">
+    <div class="bg-white p-5 w-full max-w-4xl ">
+        <div class="flex justify-center">
+            <button id="startBtn" class="text-white font-bold bg-emerald-400 py-3 px-7 rounded-xl">
+                Bắt đầu
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 md:col-span-2">
+                <div id="board" class="grid grid-cols-4 gap-4 auto-rows-[100px]"></div>
+            </div>
+            <div class="flex flex-col gap-7">
+                <div class="bg-emerald-100 text-center p-4 rounded-xl border-emerald-100">
+                    <h1 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-1">Đồng hồ</h1>
+                    <div id="timer" class="text-3xl font-bold text-gray-900 font-mono">00:00</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 text-center shadow">
+                    <h2 class="font-medium text-gray-400 mb-4">Hướng Dẫn Di Chuyển</h2>
+                    <div class="flex flex-col items-center gap-1 pb-2">
+                        <div id="key-up" class="border border-gray-300 rounded flex w-9 h-9 items-center justify-center font-bold bg-gray-200 duration-100 transition-all shadow">↑</div>
+                        <div class="flex gap-1">
+                            <div id="key-left" class="border border-gray-300 rounded flex w-9 h-9 items-center justify-center font-bold bg-gray-200 duration-100 transition-all shadow">←</div>
+                            <div id="key-down" class="border border-gray-300 rounded flex w-9 h-9 items-center justify-center font-bold bg-gray-200 duration-100 transition-all shadow">↓</div>
+                            <div id="key-right" class="border border-gray-300 rounded flex w-9 h-9 items-center justify-center font-bold bg-gray-200 duration-100 transition-all shadow">→</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center font-mono gap-1">
+                        <div class="flex">
+                            <div id="key-w" class="border border-gray-300 rounded flex w-9 h-9 items-center justify-center font-bold bg-gray-200 duration-100 transition-all shadow">
+                                W
+                            </div>
+                        </div>
+                        <div class="flex gap-1 ">
+                            <div id="key-a" class="border border-gray-300 w-9 h-9 rounded flex items-center justify-center font-bold bg-gray-200 shadow duration-100 transition-all">
+                                A
+                            </div>
+                            <div id="key-s" class="border border-gray-300 w-9 h-9 rounded flex items-center justify-center font-bold bg-gray-200 shadow duration-100 transition-all">
+                                S
+                            </div>
+                            <div id="key-d" class="border border-gray-300 w-9 h-9 rounded flex items-center justify-center font-bold bg-gray-200 shadow duration-100 transition-all">
+                                D
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-center font-bold text-gray-700 mb-4 ">Lịch Sử Lượt Chơi </h3>
+            <div class="rounded-lg border border-gray-100 bg-gray-200">
+                <div class="text-left bg-white w-full">
+                    <div>
+                        <div class="flex w-full">
+                            <div class="p-3 w-[10%] text-center">#</div>
+                            <div class="p-3 w-[60%] text-left">Bước đi</div>
+                            <div class="p-3 w-[30%] text-left">Thời Gian</div>
+                        </div>
+                    </div>
+                    <div id="historyLog" class="max-h-40 overflow-y-auto block divide-y divide-gray-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="an.js"></script>
+</body>
+</html>
